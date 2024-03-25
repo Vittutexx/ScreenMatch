@@ -8,30 +8,21 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         //Criando uma variável com referencia do tipo br.com.alura.screematch.modelo.Filme
-        Filme meuFilme = new Filme();
+        Filme meuFilme = new Filme("O Poderoso Chefão", 1970);
+
         //Instanciando o objeto e passando valores para os seus atributos
-        meuFilme.setNome("O Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
-
-
         System.out.println("Duração em minutos:" + meuFilme.getDuracaoEmMinutos());
-
-
         meuFilme.exibirFichaTecnica();
         meuFilme.avaliar(7);
         meuFilme.avaliar(6);
         meuFilme.avaliar(8);
         System.out.println(meuFilme.retornaMedia());
-
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
 
 
 
-        Serie lost = new Serie();
-
-        lost.setNome("LOST");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("LOST", 2000);
         lost.exibirFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -42,10 +33,8 @@ public class Principal {
         calculadora.inclui(meuFilme);
         System.out.println(calculadora.getTempoTotal());
 
-        Filme outroFilme = new Filme();
+        Filme outroFilme = new Filme("Avatar", 2023);
         //Instanciando o objeto e passando valores para os seus atributos
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         calculadora.inclui(outroFilme);
@@ -63,13 +52,11 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
-        filmeDoPaulo.setAnoDeLancamento(2003);
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.avaliar(10);
 
-        ArrayList<Filme> listaDeFilmes= new ArrayList<>();
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDoPaulo);
         listaDeFilmes.add(outroFilme);
         listaDeFilmes.add(meuFilme);
