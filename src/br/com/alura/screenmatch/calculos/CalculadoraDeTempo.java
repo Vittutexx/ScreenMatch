@@ -14,8 +14,8 @@ public class CalculadoraDeTempo {
 //
 //    }
 
-    public void inclui(Titulo t){
-        this.tempoTotal += t.getDuracaoEmMinutos();
+    public void inclui(Titulo titulo){
+        this.tempoTotal += titulo.getDuracaoEmMinutos();
 
     }
 
