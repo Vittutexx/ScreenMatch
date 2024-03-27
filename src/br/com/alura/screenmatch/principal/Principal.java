@@ -1,5 +1,8 @@
-package br.com.alura.screematch.modelo;
+package br.com.alura.screenmatch.principal;
 
+import br.com.alura.screenmatch.modelo.Episodio;
+import br.com.alura.screenmatch.modelo.Filme;
+import br.com.alura.screenmatch.modelo.Serie;
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 

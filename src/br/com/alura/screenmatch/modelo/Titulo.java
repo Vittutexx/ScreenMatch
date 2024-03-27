@@ -1,4 +1,4 @@
-package br.com.alura.screematch.modelo;
+package br.com.alura.screenmatch.modelo;
 
 public class Titulo {
     //ATRIBUTOS
