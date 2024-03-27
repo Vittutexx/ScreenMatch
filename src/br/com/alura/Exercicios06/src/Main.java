@@ -3,8 +3,10 @@ import java.util.ArrayList;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) {/*
         //1. Crie um ArrayList de strings e utilize um loop foreach para percorrer e imprimir cada elemento da lista.
+
+
         ArrayList<String> cores = new ArrayList<>();
 
         cores.add("azul");
@@ -38,10 +40,10 @@ public class Main {
         double media;
         double valoresProduto = 0.00;
 
-        for (Produto produto : produtos) {
-            valoresProduto += produto.getPreco();
-            qtdProduto++;
-        }
+            for (Produto produto : produtos) {
+                valoresProduto += produto.getPreco();
+                qtdProduto++;
+            }
         media = (valoresProduto / qtdProduto);
 
         System.out.println("MEDIA DE PREÇO DOS PRODUTOS: " + media);
@@ -61,12 +63,45 @@ public class Main {
         formas.add(circulo);
         formas.add(circulu);
 
-        for (Forma forma : formas) {
-            double resultado = forma.calcularArea();
+            for (Forma forma : formas) {
+                double resultado = forma.calcularArea();
 
-                System.out.println("Área: " + resultado);
+                if (forma instanceof Quadrado) {
+                    System.out.println("Área do quadrado: " + resultado);
+                } else if (forma instanceof Circulu) {
+                    System.out.println("Área do círculo: " + resultado);
+
+                }
+
             }
 
 
-        }//main
+
+        //6. Crie uma classe ContaBancaria com propriedades como número da conta e saldo. Em seguida, crie uma lista de contas bancárias com diferentes saldos. Utilize um loop para encontrar e imprimir a conta com o maior saldo.
+        ArrayList<ContaBancaria> contas = new ArrayList<ContaBancaria>();
+
+            ContaBancaria conta1 = new ContaBancaria("1786-60", 542);
+            ContaBancaria conta2 = new ContaBancaria("1755-90", 200);
+            ContaBancaria conta3 = new ContaBancaria("1722-50", 50);
+            ContaBancaria conta4 = new ContaBancaria("1712-00", 1500);
+
+            contas.add(conta1);
+            contas.add(conta2);
+            contas.add(conta3);
+            contas.add(conta4);
+
+            ContaBancaria maiorSaldo = contas.get(0);
+
+            for (int i = 0; i < contas.size() ; i++) {
+                if (contas.get(i).getSaldo() >= maiorSaldo.getSaldo()){
+                    maiorSaldo = contas.get(i);
+
+                }
+            }
+
+        System.out.println("Numero da Conta: " + maiorSaldo.getNumeroConta() +
+                "\n" + "Saldo: " + maiorSaldo.getSaldo());
+
+         */
+    }//main
     }//class
