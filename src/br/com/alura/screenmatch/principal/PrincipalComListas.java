@@ -3,7 +3,6 @@ import br.com.alura.screenmatch.modelo.Filme;
 import br.com.alura.screenmatch.modelo.Serie;
 import br.com.alura.screenmatch.modelo.Titulo;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class PrincipalComListas {
 
@@ -32,19 +31,5 @@ public class PrincipalComListas {
 
             }//if
         }//for
-
-
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
-        buscaPorArtista.add("Adam Sandler");
-        buscaPorArtista.add("Paulo");
-        buscaPorArtista.add("Jaqueline");
-        System.out.println(buscaPorArtista);
-
-        Collections.sort(buscaPorArtista);
-
-        System.out.println("\nDepois da ordenação do colletions: \n" + buscaPorArtista);
-        System.out.println("\nLista de titulos ordenados: \n" + lista);
-        Collections.sort(lista);
-
     }//main
 }//class
