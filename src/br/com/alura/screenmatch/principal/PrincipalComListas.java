@@ -2,8 +2,8 @@ package br.com.alura.screenmatch.principal;
 import br.com.alura.screenmatch.modelo.Filme;
 import br.com.alura.screenmatch.modelo.Serie;
 import br.com.alura.screenmatch.modelo.Titulo;
-import java.util.ArrayList;
-import java.util.Collections;
+
+import java.util.*;
 
 public class PrincipalComListas {
 
@@ -18,7 +18,7 @@ public class PrincipalComListas {
 
         Filme f1 = filmeDoPaulo;
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(filmeDoPaulo);
         lista.add(meuFilme);
         lista.add(outroFilme);
@@ -45,6 +45,9 @@ public class PrincipalComListas {
         System.out.println("\nDepois da ordenação do colletions: \n" + buscaPorArtista);
         System.out.println("\nLista de titulos ordenados: \n" + lista);
         Collections.sort(lista);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano: \n" + lista);
 
     }//main
 }//class
